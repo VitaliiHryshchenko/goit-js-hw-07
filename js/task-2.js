@@ -25,6 +25,7 @@ const images = [
   },
 ];
 const ul = document.querySelector('.gallery');
+
 const elements = images.map(itemList => {
   const li = document.createElement('li');
   li.classList.add('list');
@@ -37,7 +38,6 @@ const elements = images.map(itemList => {
   return li;
 });
 ul.append(...elements);
-
 // images.map(element => {
 //   const li = document.createElement('li');
 //   li.classList.add('list');
