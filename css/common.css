@@ -161,3 +161,27 @@ input{
 }
 
 /* ================ /Task 4================ */
+
+/* ================ Task 5================ */
+.change-color {
+  background-color: #4E75FF;
+  color:#FFFFFF;
+  width: 116px;
+  height: 24px;
+  font-family: Montserrat;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 24px;
+    letter-spacing: 0.04em;
+    text-align: left;
+}
+p {
+  font-family: Montserrat;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 24px;
+    letter-spacing: 0.04em;
+    text-align: left;
+    margin-bottom: 16px;
+}
+/* ================ /Task 5================ */
