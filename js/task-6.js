@@ -9,9 +9,8 @@ const reader = document.querySelector('#controls input');
 let boxSize = 20; // змінна для розмірів елемента
 reader.addEventListener('input', handleRead);
 function handleRead(event) {
-  const userText = event.currentTarget.value;
-
-  return userText;
+  boxeElement.innerHTML = '';
+  return event.currentTarget.value;
 }
 elements[0].addEventListener('click', handleClick);
 function handleClick(event) {
