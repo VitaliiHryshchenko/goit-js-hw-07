@@ -10,6 +10,7 @@ let boxSize = 20; // змінна для розмірів елемента
 reader.addEventListener('input', handleRead);
 function handleRead(event) {
   boxeElement.innerHTML = '';
+  boxSize = 20;
   return event.currentTarget.value;
 }
 elements[0].addEventListener('click', handleClick);
