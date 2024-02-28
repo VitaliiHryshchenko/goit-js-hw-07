@@ -6,7 +6,6 @@ function getRandomHexColor() {
 const elements = document.querySelectorAll('#controls button');
 const boxeElement = document.querySelector('#boxes');
 const reader = document.querySelector('#controls input');
-
 let boxSize = 20; // змінна для розмірів елемента
 reader.addEventListener('input', handleRead);
 function handleRead(event) {
@@ -14,20 +13,22 @@ function handleRead(event) {
 
   return userText;
 }
-
 elements[0].addEventListener('click', handleClick);
-
-function handleClick(event, handleRead) {
-  const div = document.createElement('div');
-
-  div.style = `background-color: ${getRandomHexColor()}`;
-  boxSize += 10;
-  div.style.width = `${boxSize}px`;
-  div.style.height = `${boxSize}px`;
-  boxeElement.append(div);
-  console.log(handleRead);
+function handleClick(event) {
+  const userText = handleRead(event);
+  const numberOfBoxes = parseInt(reader.value, 10);
+  if (numberOfBoxes >= 1 && numberOfBoxes <= 100) {
+    for (let i = 0; i < numberOfBoxes; i++) {
+      const div = document.createElement('div');
+      div.style.backgroundColor = getRandomHexColor();
+      boxSize += 10;
+      div.style.width = `${boxSize}px`;
+      div.style.height = `${boxSize}px`;
+      div.textContent = userText;
+      boxeElement.append(div);
+    }
+  }
 }
-
 elements[1].addEventListener('click', deleteColection);
 function deleteColection(event) {
   boxeElement.innerHTML = '';
