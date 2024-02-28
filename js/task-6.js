@@ -15,7 +15,6 @@ function handleRead(event) {
 }
 elements[0].addEventListener('click', handleClick);
 function handleClick(event) {
-  const userText = handleRead(event);
   const numberOfBoxes = parseInt(reader.value, 10);
   if (numberOfBoxes >= 1 && numberOfBoxes <= 100) {
     for (let i = 0; i < numberOfBoxes; i++) {
@@ -24,10 +23,10 @@ function handleClick(event) {
       boxSize += 10;
       div.style.width = `${boxSize}px`;
       div.style.height = `${boxSize}px`;
-      div.textContent = userText;
       boxeElement.append(div);
     }
   }
+  reader.value = '';
 }
 elements[1].addEventListener('click', deleteColection);
 function deleteColection(event) {
